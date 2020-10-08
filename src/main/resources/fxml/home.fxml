@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.duplicates.finder.gui.controllers.HomeController">
+    <top>
+        <VBox prefHeight="260.0" prefWidth="1200.0" styleClass="application-top" BorderPane.alignment="CENTER">
+            <children>
+                <FlowPane alignment="TOP_CENTER" columnHalignment="CENTER" hgap="30.0" prefHeight="81.0" prefWidth="1200.0" vgap="20.0">
+                    <children>
+                        <TextField fx:id="chosenFolderField" disable="true" prefHeight="25.0" prefWidth="611.0" styleClass="text-input" />
+                        <Button mnemonicParsing="false" onAction="#chooseFolder" styleClass="browse-button" text="Browse" />
+                    </children>
+
+                    <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                    </padding>
+                </FlowPane>
+                <FlowPane alignment="TOP_CENTER" columnHalignment="CENTER" hgap="30.0" prefHeight="100.0" prefWidth="1200.0">
+                    <children>
+                        <VBox prefHeight="100.0" prefWidth="550.0">
+                            <children>
+                                <FlowPane hgap="20.0" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Label prefWidth="100.0" styleClass="white-label" text="Min Size" />
+                                        <TextField fx:id="minSizeField" prefHeight="25.0" prefWidth="68.0" styleClass="text-input" />
+                                        <ComboBox fx:id="minSizeUnitCombo" prefHeight="25.0" prefWidth="70.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </FlowPane>
+                                <FlowPane hgap="20.0" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Label prefWidth="100.0" styleClass="white-label" text="Max Size" />
+                                        <TextField fx:id="maxSizeField" prefHeight="25.0" prefWidth="68.0" styleClass="text-input" />
+                                        <ComboBox fx:id="maxSizeUnitCombo" prefHeight="25.0" prefWidth="70.0" />
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+                                    </padding>
+                                </FlowPane>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="550.0">
+                            <children>
+                                <FlowPane alignment="CENTER" hgap="30.0" prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <RadioButton fx:id="enabledExtensionRadioButton" mnemonicParsing="false" onAction="#changeExtensionsField" styleClass="white-radio-button" text="Filter Enabled Extensions" />
+                                        <RadioButton fx:id="disabledExtensionRadioButton" mnemonicParsing="false" onAction="#changeExtensionsField" styleClass="white-radio-button" text="Filter on Disabled Extension" />
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                    </padding>
+                                </FlowPane>
+                                <FlowPane prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Label prefWidth="150.0" styleClass="white-label" text="Enabled Extensions" />
+                                        <TextField fx:id="enabledExtensionsField" prefHeight="25.0" prefWidth="345.0" promptText="example: exe, pdf, mp3..." styleClass="text-input" />
+                                    </children>
+                                </FlowPane>
+                                <FlowPane prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Label prefWidth="150.0" styleClass="white-label" text="Disabled Extensions" />
+                                        <TextField fx:id="disabledExtensionsField" prefHeight="25.0" prefWidth="345.0" promptText="example: exe, pdf, mp3..." styleClass="text-input" />
+                                    </children>
+                                </FlowPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </FlowPane>
+                <FlowPane alignment="CENTER" hgap="30.0" prefHeight="54.0" prefWidth="1200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#clearFilters" styleClass="clear-filters-button" text="Clear Filters" />
+                  <Button fx:id="startButton" mnemonicParsing="false" onAction="#startFetching" prefHeight="25.0" prefWidth="289.0" styleClass="start-button" text="Start" />
+               </children></FlowPane>
+            </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" />
+         </BorderPane.margin>
+        </VBox>
+    </top>
+   <center>
+      <FlowPane fx:id="outputArea" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </FlowPane>
+   </center>
+   <bottom>
+      <FlowPane prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER_LEFT">
+         <padding>
+            <Insets bottom="3.0" left="30.0" right="3.0" top="10.0" />
+         </padding>
+         <children>
+            <Label fx:id="bottomLabel" textFill="#727272">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </FlowPane>
+   </bottom>
+</BorderPane>

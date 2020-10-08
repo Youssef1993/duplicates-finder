@@ -1,0 +1,33 @@
+.application-top {
+    -fx-background-color: #004763;
+}
+.white-label {
+    -fx-text-fill: #eaeaea;
+}
+.white-radio-button {
+    -fx-text-fill: #eaeaea;
+}
+.text-input {
+    -fx-border-radius: 0px;
+}
+.browse-button {
+    -fx-background-color: white;
+    -fx-padding: 7px 20px;
+    -fx-text-fill: #616161;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.clear-filters-button {
+    -fx-background-color: #ffee89;
+    -fx-padding: 10px 10px;
+    -fx-text-fill: #47473a;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.start-button {
+    -fx-background-color: #f89988;
+    -fx-padding: 10px 40px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
